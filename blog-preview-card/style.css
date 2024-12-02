@@ -1,119 +1,139 @@
 @font-face {
-    font-family: Figtree;
-    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+  font-family: Figtree;
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    display: flex;
-    width: 1440px;
-    height: 960px;
-    background-color: #F4D04E;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #f4d04e;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
-    display: block;
-    text-decoration: none;
-    margin: 0px 0px 12px;
+  display: block;
+  text-decoration: none;
+  margin: 0px 0px 12px;
 }
 
 h1 {
-    display: inline-block;
-    font-family: Figtree;
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: 0px;
-    color: #111111;
-    margin: 0px;
-    padding: 0px;
+  display: inline-block;
+  font-family: Figtree;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #111111;
+  margin: 0px;
+  padding: 0px;
 }
 
 h1:hover {
-    color: #F4D04E;
+  color: #f4d04e;
 }
 
 p {
-    margin: 0px 0px 24px;
-    padding: 0px;
-    display: block;
-    font-family: Figtree;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0px;
-    color: #6B6B6B;
+  margin: 0px 0px 24px;
+  padding: 0px;
+  display: block;
+  font-family: Figtree;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #6b6b6b;
 }
 
 .card {
-    padding: 24px;
-    width: 334px;
-    height: 472px;
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    margin: 0px 0px 24px;
-    border: 1px solid #111111;
-    filter: drop-shadow(8px 8px rgba(0, 0, 0));
+  padding: 24px;
+  width: 334px;
+  height: 472px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin: 0px 0px 24px;
+  border: 1px solid #111111;
+  filter: drop-shadow(8px 8px rgba(0, 0, 0));
 }
 
 .illustration {
-    width: 336px;
-    height: 200px;
-    border-radius: 10px;
-    margin: 0px 0px 24px;
-    /* remove extra space below image */
-    display: block;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  margin: 0px 0px 24px;
+  /* remove extra space below image */
+  display: block;
+  object-fit: cover;
 }
 
 .text-wrapper {
-    margin: 0px 0px 24px;
+  margin: 0px 0px 24px;
 }
 
 .tag {
-    border-radius: 4px;
-    background-color: #F4D04E;
-    font-family: Figtree;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 0px;
-    display: inline-block;
-    padding: 4px 12px;
-    margin: 0px 0px 12px;
+  border-radius: 4px;
+  background-color: #f4d04e;
+  font-family: Figtree;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 0px 0px 12px;
 }
 
 .date {
-    font-family: Figtree;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 0px;
-    display: inline-block;
-    margin: 0px 0px 12px;
+  font-family: Figtree;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  display: inline-block;
+  margin: 0px 0px 12px;
 }
 
 .author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .avatar {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 span {
-    font-family: Figtree;
-    font-weight: 800;
+  font-family: Figtree;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #111111;
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 279px;
+    height: 453px;
+  }
+  .tag {
+    font-size: 12px;
+  }
+  .date {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  p {
     font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 0px;
-    color: #111111;
+  }
 }
