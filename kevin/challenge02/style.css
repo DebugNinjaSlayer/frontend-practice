@@ -28,22 +28,16 @@ body {
   width: 100%;
   background: #23424a;
   padding: 0px;
+  color: white;
 }
 
 .container {
   /* use this to center the content container */
   margin: 0 auto; 
   max-width: 750px;
-  color: white;
   padding: 50px;
 }
 
 .intro-content {
   width: 50%;
-}
-
-.more-content-container {
-  margin: 0 auto;
-  max-width: 750px;
-  padding: 50px;
 }
