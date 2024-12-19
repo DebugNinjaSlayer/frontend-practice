@@ -1,0 +1,179 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* 9. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.hero {
+  background-color: #f3eed9;
+  width: 100%;
+}
+
+.hero p {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.hero h1 {
+  font-family: "Playfair Display";
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 100%;
+  color: #824936;
+  text-align: center;
+}
+
+.design {
+  /* margin: 0 auto;
+  width: 80%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+
+.design-intro {
+  display: flex;
+  flex-direction: row;
+}
+
+.design h2 {
+  font-family: "Playfair Display";
+  font-weight: 900;
+  font-size: 36px;
+  color: #824936;
+}
+
+.design-intro p {
+  font-family: "Roboto";
+  font-size: 21px;
+  font-weight: 400;
+  margin: 2rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.section--1 {
+  background-color: #222C2A;
+}
+
+.intro--1 {
+  display: flex;
+  padding: 5%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.intro--1 h2 {
+  color: #F3EED9;
+}
+
+.intro--1 p {
+  color: #FFF;
+}
+
+.intro--1 img {
+  margin-left: 2rem;
+}
+
+.section--2 {
+  background-color: #824936;
+}
+
+
+.intro--2 {
+  display: flex;
+  padding: 5%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.intro--2 h2 {
+  color: #F3EED9;
+}
+
+.intro--2 p {
+  color: #FFF;
+}
+
+.intro--2 img {
+  margin-right: 2rem;
+}
