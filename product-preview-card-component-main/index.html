@@ -1,36 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            text: ["Montserrat"],
+            heading: ["Fraunces"],
+          },
+        },
+      };
+    </script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Product preview card component</title>
 
-  Perfume
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="flex h-screen w-full items-center justify-center bg-[#F1E7DF]">
+      <div class="mx-4 my-7 overflow-hidden rounded-xl bg-white">
+        <img
+          src="./images/image-product-mobile.jpg"
+          alt="a bottole of perfume"
+        />
+        <div class="flex flex-col p-6">
+          <small
+            class="font-text text-xs font-medium uppercase tracking-[.4rem] text-[#84878E]"
+            >Perfume</small
+          >
+          <h1 class="font-heading mt-4 text-3xl font-bold">
+            Gabrielle Essence Eau De Parfum
+          </h1>
+          <p class="font-text mt-4 text-sm leading-loose text-[#84878E]">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="mt-4 flex items-center">
+            <span class="font-heading text-3xl font-bold text-[#37765E]"
+              >$149.99</span
+            >
+            <span class="font-heading ml-6 text-sm text-[#84878E] line-through"
+              >$169.99</span
+            >
+          </div>
+          <button
+            class="font-text mt-4 flex items-center justify-center rounded-lg bg-[#37765E] p-4 font-bold text-white"
+          >
+            <img src="./images/icon-cart.svg" alt="cart icon" class="mr-3" />
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
