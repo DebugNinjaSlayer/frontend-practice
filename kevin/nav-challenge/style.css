@@ -64,8 +64,27 @@ header {
 
 .nav {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.nav__item {
+    list-style: none;
+}
+
+.nav__list {
+    padding: 0;
+    margin: 0;
+}
+
+.nav__list + .nav__list {
+    margin-top: 2em;
+}
+
+.nav__link, .nav__link:hover {
+    text-decoration: none;
+}
 
 
 .nav-toggle {
@@ -179,11 +198,18 @@ header {
         visibility: visible;
         display: flex;
         height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: inherit;
+        width: auto;
+        flex: 1;
+        margin-left: 2em;
     }
 
     .row {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
 
     }
 
@@ -204,6 +230,17 @@ header {
     .sidebar {
         width: 32%;
     }
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+    }
     
-    
+    .nav__list + .nav__list {
+        margin-top: 0px;
+    }
+
+    .nav__item + .nav__item {
+        margin-left: 3em;
+    }
 }
