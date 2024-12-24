@@ -111,6 +111,20 @@ h6 {
   flex-direction: row;
 }
 
+@media (max-width: 40rem) {
+  .design-intro {
+    flex-direction: column;
+  }
+
+  .intro--1 {
+    flex-direction: column;
+  }
+
+  .intro--2 {
+    flex-direction: column;
+  }
+}
+
 .design h2 {
   font-family: "Playfair Display";
   font-weight: 900;
@@ -139,6 +153,7 @@ h6 {
   padding: 5%;
   justify-content: center;
   align-items: flex-start;
+  gap: 2rem;
 }
 
 
@@ -148,10 +163,6 @@ h6 {
 
 .intro--1 p {
   color: #FFF;
-}
-
-.intro--1 img {
-  margin-left: 2rem;
 }
 
 .section--2 {
@@ -164,6 +175,7 @@ h6 {
   padding: 5%;
   justify-content: center;
   align-items: flex-start;
+  gap: 2rem;
 }
 
 .intro--2 h2 {
@@ -172,8 +184,4 @@ h6 {
 
 .intro--2 p {
   color: #FFF;
-}
-
-.intro--2 img {
-  margin-right: 2rem;
 }

@@ -1,11 +1,12 @@
-/* 
-////// For this challenge ///////
+/* Challenge
 
-- All text is in the text.md file
+   Make the navigation layout work
+   on both mobile and large screens.
 
-// Requirements
-   1. Get all the navigation items next to one another
-   2. Add a space between all the items
+   Mobile-first, so mobile styles first,
+   then add the large screen styles
+   inside the existing media query
+
 */
 
 *, *::before, *::after {
@@ -51,65 +52,89 @@ h1 {
     width: 80%;
     max-width: 1100px;
     margin: 0 auto;
+    /* added for nav-toggle positioning */
+    position: relative;
 }
-
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.col {
-    /* these are now flex items */
-    width: 100%;
-}
-
-.col + .col {
-    margin-left: 30px;
-}
-
 
 header {
     background: #136c72;
-    padding: .5em 0;
+    padding: 1em 0;
+    text-align: center;
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: space-between;
+    width: 100%;
 }
 
-.nav__logo {
-    margin-right: 2rem;
+
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072A2D;
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 0;
 }
 
-.nav__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-}
-
-.nav__item + .nav__item {
-    margin-left: 2rem;
-}
-
-.nav__link {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;;
-}
-
-.nav__link--button {
-    background: #fff;
-    color: #136c72;
-    padding: .25em 1em;
-    border-radius: 10em;
-}
-
-.nav__link:hover {
+.nav-toggle:focus,
+.nav-toggle:hover {
     opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/* made changes here from video
+   to make it more accessible.
+   
+   Works the same :) */
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+
+
+.logo {
+    height: 30px;
 }
 
 
@@ -119,14 +144,10 @@ header {
     color: #FFF;
 }
 
-.hero__text { 
-    width: 62%;
+.hero__img {
+    margin-top: 2em;
 }
 
-.hero__img {
-    width: 32%;
-    align-self: flex-start;
-}
 
 .hero p {
     margin-bottom: 3em;
@@ -136,14 +157,53 @@ header {
     margin-top: 3em;
 }
 
-.primary-content {
-    width: 62%;
-}
 
 .sidebar {
-    width: 32%;
     padding: 1em;
     text-align: center;
     color: #fff;
     background-color: #136c72;
+
+}
+
+
+
+@media (min-width: 800px) {
+
+    
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        height: auto;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .hero__text {
+        width: 62%;
+    }
+    
+    .hero__img {
+        width: 32%;
+        align-self: flex-start;
+        margin: 0;
+    }
+    
+    .primary-content {
+        width: 62%;
+    }
+
+    .sidebar {
+        width: 32%;
+    }
+    
+    
 }
