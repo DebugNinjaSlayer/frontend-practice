@@ -19,16 +19,6 @@ body {
   color: hsl(292, 42%, 14%);
 }
 
-@media screen and (min-width: 375px) {
-  body {
-    background-image: url("assets/images/background-pattern-desktop.svg");
-  }
-
-  .card {
-    max-width: 570px;
-  }
-}
-
 .card {
   background-color: white;
   border: none;
@@ -36,6 +26,11 @@ body {
   width: 90%;
 
   padding: 30px;
+}
+
+li h2.question:hover {
+  cursor: pointer;
+  background-color: hsl(275, 100%, 97%);
 }
 
 .title {
@@ -53,6 +48,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 
   font-size: 1.1rem;
   font-weight: 600;
@@ -74,6 +70,24 @@ li {
   flex-direction: column;
 }
 
-li .collapsed {
+li.collapsed img[src*="minus"] {
   display: none;
+}
+
+li:not(.collapsed) img[src*="plus"] {
+  display: none;
+}
+
+li.collapsed p {
+  display: none;
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+  }
+
+  .card {
+    max-width: 570px;
+  }
 }
