@@ -28,9 +28,11 @@ body {
   padding: 30px;
 }
 
-li h2.question:hover {
-  cursor: pointer;
-  background-color: hsl(275, 100%, 97%);
+@media (hover: hover) {
+  li h2.question:hover {
+    cursor: pointer;
+    background-color: hsl(275, 100%, 97%);
+  }
 }
 
 .title {
