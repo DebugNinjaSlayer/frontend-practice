@@ -19,6 +19,16 @@ body {
   color: hsl(292, 42%, 14%);
 }
 
+@media screen and (min-width: 375px) {
+  body {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+  }
+
+  .card {
+    max-width: 570px;
+  }
+}
+
 .card {
   background-color: white;
   border: none;
@@ -57,4 +67,13 @@ li:not(:last-child) {
   border-bottom: 1px solid hsl(275, 100%, 97%);
   padding-bottom: 10px;
   margin-bottom: 10px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+}
+
+li .collapsed {
+  display: none;
 }
