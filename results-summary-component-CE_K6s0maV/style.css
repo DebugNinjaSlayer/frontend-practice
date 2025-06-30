@@ -1,0 +1,183 @@
+* {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.result-card {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.result-card h1 {
+  color: hsl(241, 100%, 89%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.result-card div {
+  border-radius: 100%;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  width: 150px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-card .score-value {
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 800;
+  color: white;
+}
+
+.result-card .score-total {
+  font-weight: 700;
+  color: hsl(241, 100%, 89%);
+}
+
+.result-card .assessment {
+  margin-top: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.result-card .description {
+  color: hsl(241, 100%, 89%);
+  padding: 0% 30px;
+  font-weight: 500;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 20px;
+}
+
+.summary h2 {
+  font-size: 1.2rem;
+  color: hsl(224, 30%, 27%);
+}
+
+.summary ul {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.scores li {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.score-name-container {
+  display: flex;
+  font-weight: 700;
+  gap: 15px;
+}
+
+.scores .score-value {
+  color: hsl(224, 30%, 27%);
+  font-weight: 700;
+}
+
+.scores .score-total {
+  color: hsl(241, 100%, 89%);
+  font-weight: 700;
+}
+
+.reaction .score-name-container {
+  color: hsl(0, 100%, 67%);
+}
+
+.reaction {
+  background-color: hsla(0 100% 67% / 5%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.memory .score-name-container {
+  color: hsl(39, 100%, 56%);
+}
+
+.memory {
+  background-color: hsla(39 100% 56% / 5%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.verbal .score-name-container {
+  color: hsl(166, 100%, 37%);
+}
+
+.verbal {
+  background-color: hsla(166 100% 37% / 5%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.visual .score-name-container {
+  color: hsl(234, 85%, 45%);
+}
+
+.visual {
+  background-color: hsla(234 85% 45% / 5%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: hsl(224, 30%, 27%);
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+@media (hover: hover) {
+  button:hover {
+    cursor: pointer;
+    background-color: hsla(224 30% 27%/ 85%);
+  }
+}
+
+@media screen and (min-width: 580px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(221, 100%, 96%);
+    width: 100vw;
+    height: 100vh;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    max-width: 920px;
+    background-color: white;
+    border-radius: 40px;
+  }
+
+  .container section {
+    flex: 1;
+  }
+
+  .result-card {
+    border-radius: 40px;
+  }
+}

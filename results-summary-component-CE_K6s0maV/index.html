@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="result-card">
+        <h1>Your Result</h1>
+        <div>
+          <p class="score-value">76</p>
+          <p class="score-total">of 100</p>
+        </div>
+        <p class="assessment">Great</p>
+        <p class="description">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
+      <section class="summary">
+        <h2>Summary</h2>
+        <ul class="scores">
+          <li class="reaction">
+            <div class="score-name-container">
+              <img src="assets/images/icon-reaction.svg" alt="lightning icon" />
+              <span>Reaction</span>
+            </div>
+            <div class="score-container">
+              <span class="score-value">80</span>
+              <span class="score-total">/ 100</span>
+            </div>
+          </li>
+          <li class="memory">
+            <div class="score-name-container">
+              <img src="assets/images/icon-memory.svg" alt="memory icon" />
+              <span>Memory</span>
+            </div>
+            <div class="score-container">
+              <span class="score-value">92</span>
+              <span class="score-total">/ 100</span>
+            </div>
+          </li>
+          <li class="verbal">
+            <div class="score-name-container">
+              <img src="assets/images/icon-verbal.svg" alt="verbal icon" />
+              <span>Verbal</span>
+            </div>
+            <div class="score-container">
+              <span class="score-value">61</span>
+              <span class="score-total">/ 100</span>
+            </div>
+          </li>
+          <li class="visual">
+            <div class="score-name-container">
+              <img src="assets/images/icon-visual.svg" alt="visual icon" />
+              <span>Visual</span>
+            </div>
+            <div class="score-container">
+              <span class="score-value">72</span>
+              <span class="score-total">/ 100</span>
+            </div>
+          </li>
+        </ul>
+        <button>Continue</button>
+      </section>
+    </main>
+  </body>
+</html>
